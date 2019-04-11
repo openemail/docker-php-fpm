@@ -92,8 +92,7 @@ RUN set -x && \
       \
 ### WWW  Installation
       mkdir -p /www/logs
-      chown www-data:www-data /www/logs
-
+      
 ### Networking Configuration
 EXPOSE 9000
 
