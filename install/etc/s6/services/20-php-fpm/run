@@ -14,5 +14,5 @@ echo ''
 echo '** [php-fpm] Starting php-fpm..'
 exec mkdir -p /www/logs/php-fpm 
 exec chown -R www-data:www-data /www/logs/php-fpm/*
-exec s6-setuidgid www-data php-fpm7 -F
-# exec php-fpm7 -F
+exec s6-setuidgid www-data php-fpm7 -F;
+
