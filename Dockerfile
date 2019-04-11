@@ -94,7 +94,6 @@ RUN set -x && \
       mkdir -p /www/logs
       
 ### Networking Configuration
-EXPOSE 9000
 
 ### Files Addition
 ADD install /
