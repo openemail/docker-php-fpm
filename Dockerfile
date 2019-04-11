@@ -7,7 +7,7 @@ ENV ZABBIX_HOSTNAME=php-fpm \
 
 ### Dependency Installation
 RUN set -x && \
-    echo 'http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories && \
+    echo 'https://dl.bintray.com/php-alpine/v3.9/php-7.3/' >> /etc/apk/repositories && \
     apk update && \
       apk add \
       apache2-utils \
