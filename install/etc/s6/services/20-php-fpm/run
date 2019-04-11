@@ -12,4 +12,4 @@ fi
 
 echo ''
 echo '** [php-fpm] Starting php-fpm..'
-exec s6-setuidgid www-data /usr/sbin/php-fpm7 -F;
+exec s6-setuidgid root /usr/sbin/php-fpm7 -F;
