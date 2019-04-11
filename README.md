@@ -18,7 +18,7 @@ Dockerfile to build a w/[PHP-FPM](https://php.net) container image.
 
 # Contributors
 
-- [Amila Kothalawala](https://www.linkedin.com/in/amila-m-kothalawala-87357152/)
+- [Amila Kothalawala](https://www.linkedin.com/in/amila-m-kothalawala/)
 
 
 # Table of Contents
