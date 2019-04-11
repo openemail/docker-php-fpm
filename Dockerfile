@@ -91,7 +91,7 @@ RUN set -x && \
       curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
       \
 ### WWW  Installation
-      mkdir -p /www/logs/php-fpm
+      mkdir -p /www/logs
       
 ### Networking Configuration
 EXPOSE 9000
