@@ -7,18 +7,12 @@ done
 
 if [ ! -f /tmp/state/20-php-fpm ]; then
 	### Start php-fpm
-	mkdir -p /tmp/state/
-	mkdir -p /www/html
-	chown  www-data:www-data /www/html
-	mkdir -p /www/logs/php-fpm 
-	chmod 1777 /www/logs/php-fpm
-	chown  www-data:www-data /www/logs/php-fpm
-	touch  /www/logs/php-fpm/php-fpm.log
-	chown  www-data:www-data /www/logs/php-fpm/php-fpm.log
 	echo 'Initialization Complete' >/tmp/state/20-php-fpm
 fi
 
 echo ''
 echo '** [php-fpm] Starting php-fpm..'
+exec mkdir -p /www/logs/php-fpm 
+exec chown -R www-data:www-data /www/logs/php-fpm/*
 exec s6-setuidgid www-data php-fpm7 -F
 # exec php-fpm7 -F
