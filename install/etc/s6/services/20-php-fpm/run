@@ -15,4 +15,4 @@ echo '** [php-fpm] Starting php-fpm..'
 exec mkdir -p /www/logs/php-fpm 
 exec chown -R www-data:www-data /www/logs/php-fpm
 exec s6-setuidgid www-data /usr/sbin/php-fpm7 -F;
-
+exec php-fpm -d date.timezone=${TZ} -d expose_php=0
