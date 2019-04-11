@@ -1,0 +1,27 @@
+version: '2.1'
+
+services:
+  nginx-php-fpm:
+    image: openemail/nginx-php-fpm:latest
+    container_name: nginx-php-fpm
+    volumes:
+    - ./data/:/www/html
+    - ./logs/:/www/logs
+    environment:
+    - ZABBIX_HOSTNAME=nginx-php-fpm
+    - PHP_MEMORY_LIMIT=128M
+    - UPLOAD_MAX_SIZE=2G
+    - APC_SHM_SIZE=128M
+    - OPCACHE_MEM_SIZE=128
+    - PHP_LOG_LEVEL=info
+    - PHP_TIMEOUT=300
+    - TZ=Asia/Colombo
+    networks:
+      openemail-tire:
+    restart: always
+
+networks:
+  openemail-tier:
+    external:
+      name: openemail-network
+
