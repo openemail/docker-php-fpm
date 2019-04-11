@@ -88,7 +88,7 @@ RUN set -x && \
 ###  PHP7 Setup
       addgroup -g 102 www-data && \
       adduser  -S -h  /www -G www-data -u 102 www-data && \   
-      sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php7/php.ini && \
+      #sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php7/php.ini && \
       ln -s /usr/sbin/php-fpm7 /sbin/php-fpm && \
       \
 ### Install PHP Composer
