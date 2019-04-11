@@ -83,9 +83,6 @@ RUN set -x && \
       php7-zmq \
       && \
       \
-      apk add --update php@php && \
-      apk add --update php-mbstring@php && \
-      apk add --update php-you-extension-name-here@php && \
       rm -rf /var/cache/apk/* && \
 
 ###  PHP7 Setup
