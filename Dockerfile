@@ -18,6 +18,7 @@ RUN set -x && \
       ca-certificates \
       mariadb-client \
       openssl \
+      php7 \
       php7-apcu \
       php7-amqp \
       php7-bcmath \
