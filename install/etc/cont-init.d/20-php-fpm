@@ -185,7 +185,7 @@
   sed -i -e "s/<PHP_LOG_LEVEL>/$PHP_LOG_LEVEL/g" /etc/php7/php-fpm.conf
  
   mkdir -p /www/logs/php-fpm
-  chown -R www-data /www/logs/php-fpm
-  
+  chown -R www-data:www-data /www/logs/php-fpm
+  chmd 2755 /www/logs/php-fpm
   mkdir -p /tmp/state
   touch /tmp/state/init-20-php-fpm
