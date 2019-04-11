@@ -12,6 +12,8 @@ if [ ! -f /tmp/state/20-php-fpm ]; then
 	chown  www-data:www-data /www/html
 	mkdir -p /www/logs/php-fpm 
 	chown  www-data:www-data /www/logs/php-fpm
+	touch /www/logs/php-fpm/php-fpm.log
+        chown  www-data:www-data /www/logs/php-fpm/php-fpm.log
 	
 	echo 'Initialization Complete' >/tmp/state/20-php-fpm
 fi
