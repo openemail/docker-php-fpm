@@ -18,7 +18,6 @@ if [ ! -f /tmp/state/20-php-fpm ]; then
 	echo 'Initialization Complete' >/tmp/state/20-php-fpm
 fi
 
-
 echo ''
 echo '** [php-fpm] Starting php-fpm..'
 exec s6-setuidgid www-data php-fpm7 -F
