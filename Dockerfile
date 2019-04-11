@@ -1,9 +1,13 @@
 FROM tiredofit/alpine:3.9
 LABEL maintainer="Chinthaka Deshapriya (chinthaka@cybergate.lk)"
 
+ADD https://dl.bintray.com/php-alpine/key/php-alpine.rsa.pub /etc/apk/keys/php-alpine.rsa.pub
+
+
 ### Default Runtime Environment Variables
 ENV ZABBIX_HOSTNAME=php-fpm \
     ENABLE_SMTP=TRUE
+
 
 ### Dependency Installation
 RUN set -x && \
@@ -79,6 +83,9 @@ RUN set -x && \
       php7-zmq \
       && \
       \
+      apk add --update php@php && \
+      apk add --update php-mbstring@php && \
+      apk add --update php-you-extension-name-here@php && \
       rm -rf /var/cache/apk/* && \
 
 ###  PHP7 Setup
