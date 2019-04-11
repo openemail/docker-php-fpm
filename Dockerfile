@@ -1,5 +1,5 @@
 FROM tiredofit/alpine:3.9
-LABEL maintainer="Dave Conroy (dave at tiredofit dot ca)"
+LABEL maintainer="Chinthaka Deshapriya (chinthaka@cybergate.lk)"
 
 ### Default Runtime Environment Variables
 ENV ZABBIX_HOSTNAME=php-fpm \
@@ -81,7 +81,9 @@ RUN set -x && \
       \
       rm -rf /var/cache/apk/* && \
 
-### Nginx and PHP7 Setup
+###  PHP7 Setup
+      addgroup -g 102 www-data && \
+      adduser  -S -h  /www -G www-data -u 102 www-data && \   
       sed -i 's/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php7/php.ini && \
       ln -s /sbin/php-fpm7 /sbin/php-fpm && \
       \
