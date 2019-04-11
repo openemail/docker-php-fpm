@@ -1,1 +1,2 @@
 /www/logs true www-data 0644 0644
+/www/logs/php-fpm true www-data 0644 0644
