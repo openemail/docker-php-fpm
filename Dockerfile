@@ -19,6 +19,7 @@ RUN set -x && \
       mariadb-client \
       openssl \
       php7 \
+      php7-cli \
       php7-apcu \
       php7-amqp \
       php7-bcmath \
